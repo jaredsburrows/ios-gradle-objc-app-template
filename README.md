@@ -1,7 +1,55 @@
 ios-gradle-objc-template [![Status](https://travis-ci.org/jaredsburrows/ios-gradle-objc-template.svg?branch=master)](https://travis-ci.org/jaredsburrows/ios-gradle-objc-template) [![Coverage Status](https://coveralls.io/repos/jaredsburrows/ios-gradle-objc-template/badge.svg?branch=master)](https://coveralls.io/r/jaredsburrows/ios-gradle-objc-template?branch=master)
 =========
-Gradle + Xcode + Xctest + Gcovr
+Gradle + Xcode + XCTest + Gcovr
 
+## Technologies used:
+#### Build Tools:
+|Name|Description|
+|---|---|
+| [Gradle](http://gradle.org/docs/current/release-notes) | Gradle build system |
+| [Xcode](https://developer.apple.com/xcode/) | Xcode IDE |
+
+####Testing Frameworks:
+|Name|Description|
+|---|---|
+| [XCTest](https://developer.apple.com/library/ios/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/04-writing_tests.html#//apple_ref/doc/uid/TP40014132-CH4-SW1) | XCTests Unit Testing Framework |
+| [Gcovr](http://gcovr.com/) | GNU gcov utility |
+
+####Reporting Plugins:
+|Name|Description|
+|---|---|
+| [cpp-coveralls](https://github.com/eddyxu/cpp-coveralls) | C/C++ coverage report to coveralls.io |
+
+####Continuous Integration:
+|Name|Description|
+|---|---|
+| [TravisCI](http://docs.travis-ci.com/user/languages/android/) | Build Server(Builds, Tests, Publishes reports to Coveralls)
+
+## Comand Line(Advanced):
+##### Clone with `Git`:
+ - `git clone https://github.com/jaredsburrows/ios-gradle-objc-template.git`
+ - `cd ios-gradle-objc-template`
+
+##### Building with `Gradle`:
+ - **Asssembles the project:**
+   - `gradlew assemble`
+ - **Assemble and run tests:**
+   - `gradlew build` 
+
+##### Running tests with `Gradle`:
+ - **Run all tests:**
+   - `gradlew test`
+   
+##### Running coverage with `Gradle`:
+ - **Run all [gcovr](http://gcovr.com/) code coverage:**
+   - `gradlew coverage`
+
+## Maps folders to local file system):
+
+This project uses [`synx`](https://github.com/venmo/synx):
+
+    sudo gem install cocoapods
+    gem install synx
 
 License
 =========
