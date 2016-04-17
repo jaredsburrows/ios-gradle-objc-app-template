@@ -5,17 +5,24 @@ buildscript {
     }
 
     dependencies {
+        // iOS gradle plugin
         classpath 'org.openbakery:xcode-plugin:0.13.0'
+        // Code Coverage
+        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.6.3'
+        // Check for plugin updates
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.12.0'
     }
 }
 
 apply plugin: 'org.openbakery.xcode-plugin'
+apply plugin: 'com.github.kt3k.coveralls'
+apply plugin: 'com.github.ben-manes.versions'
 
 xcodebuild {
-    target = 'ios-gradle-objc-template'
-    scheme = 'ios-gradle-objc-template'
+    target 'ios-gradle-objc-template'
+    scheme 'ios-gradle-objc-template'
 
-    configuration = 'Debug'
+    configuration 'Debug'
 
     destination {
         platform = 'iOS Simulator'
@@ -24,8 +31,12 @@ xcodebuild {
     }
 
     coverage {
-        outputFormat = 'xml'
-        exclude = '.*h$|.*UnitTests.*m$'
+        outputFormat 'xml'
+        exclude '.*h$|.*UnitTests.*m$'
     }
+}
+
+coveralls {
+    coberturaReportPath './build/coverage/cobertura.xml'
 }
 

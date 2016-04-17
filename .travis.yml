@@ -1,25 +1,12 @@
 language: objective-c
 
-osx_image: xcode7.1
-
-before_install:
-  - brew update
-  - brew install pyenv
-  - eval "$(pyenv init -)"
-  - pyenv install 2.7.6
-  - pyenv global 2.7.6
-  - pyenv rehash
-  - pip install cpp-coveralls
-  - pyenv rehash
+osx_image: xcode7.3
 
 script:
- - ./gradlew clean assemble test --stacktrace
+ - ./gradlew clean test coverage coveralls --stacktrace
 
 after_script:
  - ./gradlew simulatorKill
-
-after_success:
- - coveralls --exclude lib --exclude tests --gcov-options '\-lp'
 
 notifications:
   email: false
