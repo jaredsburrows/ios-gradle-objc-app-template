@@ -17,7 +17,6 @@ xcodebuild {
 
     configuration = 'Debug'
 
-//    destination = ['iPhone 6s']
     destination {
         platform = 'iOS Simulator'
         name = 'iPhone 6s'
@@ -29,3 +28,4 @@ xcodebuild {
         exclude = '.*h$|.*UnitTests.*m$'
     }
 }
+

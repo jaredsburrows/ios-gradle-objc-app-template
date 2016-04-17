@@ -84,10 +84,10 @@
 		30A57C351CC327D2002F0BEB = {
 			isa = PBXGroup;
 			children = (
+				30A57C3F1CC327D2002F0BEB /* Products */,
 				30A57C401CC327D2002F0BEB /* ios-gradle-objc-template */,
 				30A57C5D1CC327D3002F0BEB /* ios-gradle-objc-templateTests */,
 				30A57C681CC327D3002F0BEB /* ios-gradle-objc-templateUITests */,
-				30A57C3F1CC327D2002F0BEB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,17 +104,13 @@
 		30A57C401CC327D2002F0BEB /* ios-gradle-objc-template */ = {
 			isa = PBXGroup;
 			children = (
-				30A57C441CC327D2002F0BEB /* AppDelegate.h */,
-				30A57C451CC327D2002F0BEB /* AppDelegate.m */,
-				30A57C471CC327D2002F0BEB /* FirstViewController.h */,
-				30A57C481CC327D2002F0BEB /* FirstViewController.m */,
-				30A57C4A1CC327D2002F0BEB /* SecondViewController.h */,
-				30A57C4B1CC327D2002F0BEB /* SecondViewController.m */,
-				30A57C4D1CC327D2002F0BEB /* Main.storyboard */,
-				30A57C501CC327D2002F0BEB /* Assets.xcassets */,
-				30A57C521CC327D2002F0BEB /* LaunchScreen.storyboard */,
-				30A57C551CC327D2002F0BEB /* Info.plist */,
 				30A57C411CC327D2002F0BEB /* Supporting Files */,
+				30A57C7A1CC362AA002F0BEB /* include */,
+				30A57C791CC3629F002F0BEB /* src */,
+				30A57C501CC327D2002F0BEB /* Assets.xcassets */,
+				30A57C551CC327D2002F0BEB /* Info.plist */,
+				30A57C521CC327D2002F0BEB /* LaunchScreen.storyboard */,
+				30A57C4D1CC327D2002F0BEB /* Main.storyboard */,
 			);
 			path = "ios-gradle-objc-template";
 			sourceTree = "<group>";
@@ -124,14 +120,14 @@
 			children = (
 				30A57C421CC327D2002F0BEB /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		30A57C5D1CC327D3002F0BEB /* ios-gradle-objc-templateTests */ = {
 			isa = PBXGroup;
 			children = (
-				30A57C5E1CC327D3002F0BEB /* ios_gradle_objc_templateTests.m */,
 				30A57C601CC327D3002F0BEB /* Info.plist */,
+				30A57C5E1CC327D3002F0BEB /* ios_gradle_objc_templateTests.m */,
 			);
 			path = "ios-gradle-objc-templateTests";
 			sourceTree = "<group>";
@@ -139,10 +135,30 @@
 		30A57C681CC327D3002F0BEB /* ios-gradle-objc-templateUITests */ = {
 			isa = PBXGroup;
 			children = (
-				30A57C691CC327D3002F0BEB /* ios_gradle_objc_templateUITests.m */,
 				30A57C6B1CC327D3002F0BEB /* Info.plist */,
+				30A57C691CC327D3002F0BEB /* ios_gradle_objc_templateUITests.m */,
 			);
 			path = "ios-gradle-objc-templateUITests";
+			sourceTree = "<group>";
+		};
+		30A57C791CC3629F002F0BEB /* src */ = {
+			isa = PBXGroup;
+			children = (
+				30A57C451CC327D2002F0BEB /* AppDelegate.m */,
+				30A57C481CC327D2002F0BEB /* FirstViewController.m */,
+				30A57C4B1CC327D2002F0BEB /* SecondViewController.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		30A57C7A1CC362AA002F0BEB /* include */ = {
+			isa = PBXGroup;
+			children = (
+				30A57C441CC327D2002F0BEB /* AppDelegate.h */,
+				30A57C471CC327D2002F0BEB /* FirstViewController.h */,
+				30A57C4A1CC327D2002F0BEB /* SecondViewController.h */,
+			);
+			path = include;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +336,7 @@
 				30A57C4E1CC327D2002F0BEB /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		30A57C521CC327D2002F0BEB /* LaunchScreen.storyboard */ = {
@@ -328,6 +345,7 @@
 				30A57C531CC327D2002F0BEB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -508,6 +526,7 @@
 				30A57C701CC327D3002F0BEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30A57C711CC327D3002F0BEB /* Build configuration list for PBXNativeTarget "ios-gradle-objc-templateTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +535,7 @@
 				30A57C731CC327D3002F0BEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30A57C741CC327D3002F0BEB /* Build configuration list for PBXNativeTarget "ios-gradle-objc-templateUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +544,7 @@
 				30A57C761CC327D3002F0BEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
