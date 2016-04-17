@@ -1,0 +1,31 @@
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/' } // Mirrors jcenter() and mavenCentral()
+        maven { url 'http://repository.openbakery.org/' }
+    }
+
+    dependencies {
+        classpath 'org.openbakery:xcode-plugin:0.13.0'
+    }
+}
+
+apply plugin: 'org.openbakery.xcode-plugin'
+
+xcodebuild {
+    target = 'ios-gradle-objc-template'
+    scheme = 'ios-gradle-objc-template'
+
+    configuration = 'Debug'
+
+//    destination = ['iPhone 6s']
+    destination {
+        platform = 'iOS Simulator'
+        name = 'iPhone 6s'
+        os = '9.0'
+    }
+
+    coverage {
+        outputFormat = 'html'
+        exclude = '.*h$|.*UnitTests.*m$'
+    }
+}

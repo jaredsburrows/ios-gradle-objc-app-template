@@ -1,0 +1,24 @@
+language: objective-c
+
+osx_image: xcode7.1
+
+script:
+ - ./gradlew clean assemble test --stacktrace
+
+after_script:
+ - ./gradlew simulatorKill
+
+notifications:
+  email: false
+
+sudo: false
+
+before_cache:
+  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+
+cache:
+  directories:
+    - $HOME/.gradle
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+
