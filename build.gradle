@@ -24,7 +24,7 @@ xcodebuild {
     }
 
     coverage {
-        outputFormat = 'html'
+        outputFormat = 'xml'
         exclude = '.*h$|.*UnitTests.*m$'
     }
 }
