@@ -13,13 +13,12 @@ Gradle + Xcode + XCTest + Gcovr
 |Name|Description|
 |---|---|
 | [XCTest](https://developer.apple.com/library/ios/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/04-writing_tests.html#//apple_ref/doc/uid/TP40014132-CH4-SW1) | XCTests Unit Testing Framework |
-| [Gcovr](http://gcovr.com/) | GNU gcov utility |
 
 ####Reporting Plugins:
 |Name|Description|
 |---|---|
-| [cpp-coveralls](https://github.com/eddyxu/cpp-coveralls) | C/C++ coverage report to coveralls.io |
-
+| [Gcovr](http://gcovr.com/) | GNU gcov utility |
+| [Coveralls](https://coveralls.io/) | Hosts test reports published from TravisCI |
 
 ####Continuous Integration:
 |Name|Description|
