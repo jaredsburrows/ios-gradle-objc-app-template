@@ -44,7 +44,7 @@ Gradle + Xcode + XCTest + Gcovr
  - **Run all [gcovr](http://gcovr.com/) code coverage:**
    - `gradlew coverage`
 
-## Maps folders to local file system):
+## How to map folders to local file system):
 
 This project uses [`synx`](https://github.com/venmo/synx):
 
