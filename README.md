@@ -1,4 +1,4 @@
-ios-gradle-objc-template [![Status](https://travis-ci.org/jaredsburrows/ios-gradle-objc-template.svg?branch=master)](https://travis-ci.org/jaredsburrows/ios-gradle-objc-template) [![Coverage Status](https://coveralls.io/repos/jaredsburrows/ios-gradle-objc-template/badge.svg?branch=master)](https://coveralls.io/r/jaredsburrows/ios-gradle-objc-template?branch=master)
+ios-gradle-objc-template [![Status](https://travis-ci.org/jaredsburrows/ios-gradle-objc-template.svg?branch=master)](https://travis-ci.org/jaredsburrows/ios-gradle-objc-template) [![Coverage Status](https://coveralls.io/repos/github/jaredsburrows/ios-gradle-objc-template/badge.svg?branch=master)](https://coveralls.io/github/jaredsburrows/ios-gradle-objc-template?branch=master)
 =========
 Gradle + Xcode + XCTest + Gcovr
 
