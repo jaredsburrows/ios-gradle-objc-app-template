@@ -5,6 +5,8 @@ buildscript {
     }
 
     dependencies {
+        // Gradle build receipt
+        classpath "com.gradle:build-receipt-plugin:1.2"
         // iOS gradle plugin
         classpath "org.openbakery:xcode-plugin:0.13.1"
         // Code Coverage
@@ -14,6 +16,11 @@ buildscript {
     }
 }
 
+repositories {
+    maven { url "https://plugins.gradle.org/m2/" } // Mirrors jcenter() and mavenCentral()
+}
+
+apply from: rootProject.file("gradle/receipt.gradle")
 apply plugin: "org.openbakery.xcode-plugin"
 apply plugin: "com.github.kt3k.coveralls"
 apply plugin: "com.github.ben-manes.versions"

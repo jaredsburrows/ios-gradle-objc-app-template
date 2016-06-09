@@ -3,7 +3,7 @@ language: objective-c
 osx_image: xcode7.1
 
 script:
- - ./gradlew clean test coverage coveralls --stacktrace
+ - ./gradlew clean test coverage coveralls -Dreceipt --stacktrace
 
 after_script:
  - ./gradlew simulatorKill
