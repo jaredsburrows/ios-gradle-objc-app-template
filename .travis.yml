@@ -21,4 +21,3 @@ cache:
     - $HOME/.gradle
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
-

@@ -1,42 +1,41 @@
 buildscript {
     repositories {
-        maven { url 'https://plugins.gradle.org/m2/' } // Mirrors jcenter() and mavenCentral()
-        maven { url 'http://repository.openbakery.org/' }
+        maven { url "https://plugins.gradle.org/m2/" } // Mirrors jcenter() and mavenCentral()
+        maven { url "http://repository.openbakery.org/" }
     }
 
     dependencies {
         // iOS gradle plugin
-        classpath 'org.openbakery:xcode-plugin:0.13.0'
+        classpath "org.openbakery:xcode-plugin:0.13.1"
         // Code Coverage
-        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.6.3'
+        classpath "org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.6.3"
         // Check for plugin updates
-        classpath 'com.github.ben-manes:gradle-versions-plugin:0.12.0'
+        classpath "com.github.ben-manes:gradle-versions-plugin:0.12.0"
     }
 }
 
-apply plugin: 'org.openbakery.xcode-plugin'
-apply plugin: 'com.github.kt3k.coveralls'
-apply plugin: 'com.github.ben-manes.versions'
+apply plugin: "org.openbakery.xcode-plugin"
+apply plugin: "com.github.kt3k.coveralls"
+apply plugin: "com.github.ben-manes.versions"
 
 xcodebuild {
-    target 'ios-gradle-objc-template'
-    scheme 'ios-gradle-objc-template'
+    target = "ios-gradle-objc-template"
+    scheme = "ios-gradle-objc-template"
 
-    configuration 'Debug'
+    configuration = "Debug"
 
     destination {
-        platform = 'iOS Simulator'
-        name = 'iPhone 6s'
-        os = '9.0'
+        platform = "iOS Simulator"
+        name = "iPhone 6s"
+        os = "9.0"
     }
 
     coverage {
-        outputFormat 'xml'
-        exclude '.*h$|.*UnitTests.*m$'
+        outputFormat = "xml"
+        exclude = '.*h$|.*UnitTests.*m$'
     }
 }
 
 coveralls {
-    coberturaReportPath './build/coverage/cobertura.xml'
+    coberturaReportPath = "./build/coverage/cobertura.xml"
 }
-
