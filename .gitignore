@@ -55,6 +55,8 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 
+### Intellij ###
+.idea/
 
 ### Gradle ###
 .gradle
