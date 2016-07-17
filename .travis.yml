@@ -8,9 +8,6 @@ script:
 after_script:
  - ./gradlew simulatorKill
 
-notifications:
-  email: false
-
 sudo: false
 
 before_cache:
