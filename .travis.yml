@@ -3,7 +3,7 @@ language: objective-c
 osx_image: xcode7.3
 
 script:
- - ./gradlew clean test coverage coveralls -Dscan --configure-on-demand --daemon --parallel --stacktrace --console=plain -Dorg.gradle.jvmargs="-Dfile.encoding=UTF-8"
+ - ./gradlew clean test coverage coveralls -Dscan --configure-on-demand --parallel --stacktrace --console=plain -Dorg.gradle.jvmargs="-Dfile.encoding=UTF-8"
 
 after_script:
  - ./gradlew simulatorKill
