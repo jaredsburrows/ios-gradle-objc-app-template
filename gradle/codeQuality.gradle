@@ -1,0 +1,3 @@
+coveralls {
+    coberturaReportPath = "./build/coverage/cobertura.xml"
+}

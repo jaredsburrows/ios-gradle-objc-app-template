@@ -7,6 +7,7 @@ plugins {
 }
 
 apply from: rootProject.file("gradle/buildScan.gradle")
+apply from: rootProject.file("gradle/codeQuality.gradle")
 
 xcodebuild {
     target = "ios-gradle-objc-template"
@@ -24,8 +25,4 @@ xcodebuild {
         outputFormat = "xml"
         exclude = '.*h$|.*UnitTests.*m$'
     }
-}
-
-coveralls {
-    coberturaReportPath = "./build/coverage/cobertura.xml"
 }
