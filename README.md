@@ -28,26 +28,38 @@ Gradle + Xcode + XCTest + Gcovr
 |---|---|
 | [TravisCI](http://docs.travis-ci.com/user/languages/android/) | Build Server(Builds, Tests, Publishes reports to Coveralls)
 
-## Comand Line(Advanced):
-##### Clone with `Git`:
- - `git clone https://github.com/jaredsburrows/ios-gradle-objc-app-template.git`
- - `cd ios-gradle-objc-template`
 
-##### Building with `Gradle`:
- - **Asssembles the project:**
-   - `gradlew assemble`
- - **Assemble and run tests:**
-   - `gradlew build` 
+## Building and Running
 
-##### Running tests with `Gradle`:
- - **Run all tests:**
-   - `gradlew test`
+
+This project builds with [Gradle](www.gradle.org) and [Xcode](https://developer.apple.com/xcode/).
+
+
+**Build the App:**
+
+    $ gradlew assemble
    
-##### Running coverage with `Gradle`:
- - **Run all [gcovr](http://gcovr.com/) code coverage:**
-   - `gradlew coverage`
+## Testing
 
-## How to map folders to local file system):
+
+**Running the Unit Test and UI Tests:**
+
+
+    $ gradlew test
+    
+
+## Reports
+
+**Generate Jacoco Test Coverage:**
+
+
+[gcovr](http://gcovr.com/) generates coverage reports based off the unit tests.
+
+
+    $ gradlew coverage
+
+
+## How to map folders to local file system
 
 This project uses [`synx`](https://github.com/venmo/synx):
 
