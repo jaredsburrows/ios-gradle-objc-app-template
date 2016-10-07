@@ -2,6 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 [![Status](https://travis-ci.org/jaredsburrows/ios-gradle-objc-app-template.svg?branch=master)](https://travis-ci.org/jaredsburrows/ios-gradle-objc-app-template) [![Coverage Status](https://coveralls.io/repos/github/jaredsburrows/ios-gradle-objc-app-template/badge.svg?branch=master)](https://coveralls.io/github/jaredsburrows/ios-gradle-objc-app-template?branch=master)
+[![Twitter Follow](https://img.shields.io/twitter/follow/jaredsburrows.svg?style=social)](https://twitter.com/jaredsburrows)
 
 Gradle + Xcode + XCTest + Gcovr
 
