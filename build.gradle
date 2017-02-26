@@ -26,3 +26,9 @@ xcodebuild {
         exclude = '.*h$|.*UnitTests.*m$'
     }
 }
+
+task wrapper(type: Wrapper) {
+  gradleVersion = "3.4"
+  distributionType = Wrapper.DistributionType.ALL
+}
+
