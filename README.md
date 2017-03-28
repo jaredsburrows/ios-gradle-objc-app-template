@@ -13,18 +13,18 @@ Gradle + Xcode + XCTest + Gcovr
 | [Gradle](http://gradle.org/docs/current/release-notes) | Gradle build system |
 | [Xcode](https://developer.apple.com/xcode/) | Xcode IDE |
 
-####Testing Frameworks:
+#### Testing Frameworks:
 |Name|Description|
 |---|---|
 | [XCTest](https://developer.apple.com/library/ios/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/04-writing_tests.html#//apple_ref/doc/uid/TP40014132-CH4-SW1) | XCTests Unit Testing Framework |
 
-####Reporting Plugins:
+#### Reporting Plugins:
 |Name|Description|
 |---|---|
 | [Gcovr](http://gcovr.com/) | GNU gcov utility |
 | [Coveralls](https://coveralls.io/) | Hosts test reports published from TravisCI |
 
-####Continuous Integration:
+#### Continuous Integration:
 |Name|Description|
 |---|---|
 | [TravisCI](http://docs.travis-ci.com/user/languages/android/) | Build Server(Builds, Tests, Publishes reports to Coveralls)
