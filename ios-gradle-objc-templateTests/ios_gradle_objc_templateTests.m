@@ -1,11 +1,3 @@
-//
-//  ios_gradle_objc_templateTests.m
-//  ios-gradle-objc-templateTests
-//
-//  Created by noname on 4/16/16.
-//  Copyright © 2016 Jared Burrows. All rights reserved.
-//
-
 #import <XCTest/XCTest.h>
 
 @interface ios_gradle_objc_templateTests : XCTestCase
