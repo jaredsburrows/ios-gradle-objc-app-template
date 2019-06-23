@@ -2,11 +2,11 @@ language: objective-c
 
 osx_image: xcode7.3
 
-script:
-  - ./gradlew clean build coverage coveralls -s --scan
+env: TERM=dumb
 
-after_script:
-  - ./gradlew simulatorKill
+script: ./gradlew clean build coverage coveralls -s --scan
+
+after_script: ./gradlew simulatorKill -s --scan
 
 branches:
   except:
