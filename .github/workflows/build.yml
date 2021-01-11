@@ -1,0 +1,45 @@
+name: build
+
+on: [push, pull_request]
+
+jobs:
+  android:
+    runs-on: macos-latest
+
+    strategy:
+      fail-fast: false
+
+    steps:
+      - name: Cache Gradle dependencies
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper/
+            ~/.android/build-cache
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
+          restore-keys: ${{ runner.os }}-gradle
+
+      - name: Checkout Project
+        uses: actions/checkout@v2
+
+      - name: Validate Gradle Wrapper
+        uses: gradle/wrapper-validation-action@v1
+
+      - name: Show Simulators Installed
+        run: ./gradlew simulatorsList -s --scan
+
+      - name: Build and Run Tests
+        run: ./gradlew clean build coverage coveralls -s --scan
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: ios-gradle-objc-app-template-${{ github.workflow }}-${{ github.run_id }}
+          path: |
+            ios-gradle-objc-app-template/build/outputs
+            ios-gradle-objc-app-template/build/reports
+            ios-gradle-objc-app-template/build/test-results
+          if-no-files-found: warn
+

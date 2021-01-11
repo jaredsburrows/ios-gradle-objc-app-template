@@ -15,9 +15,7 @@ xcodebuild {
   configuration = 'Debug'
 
   destination {
-    platform = 'iOS Simulator'
-    name = 'iPhone 6s'
-    os = '9.0'
+    name = 'iPhone 12'
   }
 
   coverage {
