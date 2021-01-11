@@ -30,7 +30,7 @@ jobs:
         run: ./gradlew simulatorsList -s --scan
 
       - name: Build and Run Tests
-        run: ./gradlew clean build coverage coveralls -s --scan
+        run: ./gradlew clean build -s --scan
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
