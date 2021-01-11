@@ -19,12 +19,6 @@ This project builds with [Gradle](https://gradle.org/) and [Xcode](https://devel
 **Running the Unit Test and UI Tests:**
 
     $ gradlew test
-    
-## Reports
-
-**Generate [gcovr](http://gcovr.com/) Test Coverage:**
-
-    $ gradlew coverage
 
 ## How to map folders to local file system
 
