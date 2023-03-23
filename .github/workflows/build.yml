@@ -33,7 +33,7 @@ jobs:
         run: ./gradlew clean build -s --scan
 
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: always()
         with:
           name: ios-gradle-objc-app-template-${{ github.workflow }}-${{ github.run_id }}
