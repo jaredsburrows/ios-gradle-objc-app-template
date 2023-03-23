@@ -1,6 +1,11 @@
 name: build
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [ opened, labeled, unlabeled, synchronize ]
 
 jobs:
   ios:
@@ -26,20 +31,21 @@ jobs:
       - name: Validate Gradle Wrapper
         uses: gradle/wrapper-validation-action@v1
 
-      - name: Show Simulators Installed
-        run: ./gradlew simulatorsList -s --scan
+      - name: Build Debug APKs and Run lint checks
+        uses: gradle/gradle-build-action@v2.4.0
 
       - name: Build and Run Tests
         run: ./gradlew clean build -s --scan
 
+      - name: Kill the Simulator
+        run: ./gradlew simulatorKill -s --scan
+
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
-        if: always()
+        uses: actions/upload-artifact@v3
+        if: github.repository == 'jaredsburrows/ios-gradle-objc-app-template' && github.ref == 'refs/heads/master'
         with:
           name: ios-gradle-objc-app-template-${{ github.workflow }}-${{ github.run_id }}
           path: |
             ios-gradle-objc-app-template/build/outputs
             ios-gradle-objc-app-template/build/reports
             ios-gradle-objc-app-template/build/test-results
-          if-no-files-found: warn
-
