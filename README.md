@@ -12,33 +12,38 @@ This project builds with [Gradle](https://gradle.org/) and [Xcode](https://devel
 
 **Build the App:**
 
-    $ gradlew assemble
+```shell
+gradlew assemble
+```
    
 ## Testing
 
 **Running the Unit Test and UI Tests:**
 
-    $ gradlew test
+```shell
+gradlew test
+```
 
 ## How to map folders to local file system
 
 This project uses [`synx`](https://github.com/venmo/synx):
 
-    sudo gem install cocoapods
-    gem install synx
+```shell
+brew install cocoapods
+gem install synx
+```
 
 ## License
 
-     Copyright (C) 2016 Jared Burrows
-
-     Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-     Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+```
+Copyright (C) 2016 Jared Burrows
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+   http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```

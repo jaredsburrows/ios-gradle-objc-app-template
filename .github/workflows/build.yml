@@ -7,38 +7,48 @@ on:
   pull_request:
     types: [ opened, labeled, unlabeled, synchronize ]
 
+env:
+  JAVA_VERSION: 11
+
 jobs:
-  ios:
+  build:
     runs-on: macos-latest
 
     strategy:
       fail-fast: false
 
     steps:
+      - name: Checkout Project
+        uses: actions/checkout@v3.5.0
+
+      - name: Validate Gradle Wrapper
+        uses: gradle/wrapper-validation-action@v1.0.6
+
       - name: Cache Gradle dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v3.3.1
         with:
           path: |
             ~/.gradle/caches
-            ~/.gradle/wrapper/
-            ~/.android/build-cache
+            ~/.gradle/wrapper
+            Pods
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
           restore-keys: ${{ runner.os }}-gradle
 
-      - name: Checkout Project
-        uses: actions/checkout@v3
+      - name: Configure JDK ${{ env.JAVA_VERSION }}
+        uses: actions/setup-java@v3.11.0
+        with:
+          distribution: temurin
+          java-version: ${{ env.JAVA_VERSION }}
+          cache: gradle
 
-      - name: Validate Gradle Wrapper
-        uses: gradle/wrapper-validation-action@v1
-
-      - name: Build Debug APKs and Run lint checks
+      - name: Setup Gradle
         uses: gradle/gradle-build-action@v2.4.0
 
       - name: Build and Run Tests
-        run: ./gradlew clean build -s --scan
+        run: ./gradlew build -s
 
       - name: Kill the Simulator
-        run: ./gradlew simulatorKill -s --scan
+        run: ./gradlew simulatorKill -s
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
@@ -46,6 +56,4 @@ jobs:
         with:
           name: ios-gradle-objc-app-template-${{ github.workflow }}-${{ github.run_id }}
           path: |
-            ios-gradle-objc-app-template/build/outputs
-            ios-gradle-objc-app-template/build/reports
-            ios-gradle-objc-app-template/build/test-results
+            build/sym/Debug-iphonesimulator/ios-gradle-objc-app-template.app
