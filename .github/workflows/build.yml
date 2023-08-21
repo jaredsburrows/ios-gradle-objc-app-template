@@ -42,7 +42,7 @@ jobs:
           cache: gradle
 
       - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2.7.0
+        uses: gradle/gradle-build-action@v2.7.1
 
       - name: Build and Run Tests
         run: ./gradlew build -s
