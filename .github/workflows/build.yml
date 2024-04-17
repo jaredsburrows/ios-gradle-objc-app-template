@@ -21,8 +21,14 @@ jobs:
       - name: Checkout Project
         uses: actions/checkout@v4.1.2
 
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3.3.0
+        with:
+          gradle-home-cache-cleanup: true
+      - run: ./gradlew --version
+
       - name: Validate Gradle Wrapper
-        uses: gradle/wrapper-validation-action@v2.1.2
+        uses: gradle/actions/wrapper-validation@v3.3.0
 
       - name: Cache Gradle dependencies
         uses: actions/cache@v4.0.2
